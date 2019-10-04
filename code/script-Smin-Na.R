@@ -13,3 +13,11 @@
 library(dplyr)
 library(tidyverse)
 
+### 6 Exporting some data tables
+nba2018 <- read.csv("nba2018-players.csv", sep = ",")
+warriors <- filter(nba2018, team == "WAS")
+write.csv(warriors, file = "warriors.csv", row.names = TRUE)
+# mv warriors.csv ../data/
+# ls ../data/
+
+
